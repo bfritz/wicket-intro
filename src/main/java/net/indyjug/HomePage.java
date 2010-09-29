@@ -23,7 +23,8 @@ public class HomePage extends WebPage {
     public HomePage(final PageParameters parameters) {
 
         // Add the simplest type of label
-        long t = System.currentTimeMillis();
+        long t = parameters.getAsLong("ms", System.currentTimeMillis());
+
         add(new Label("message",
                     new StringResourceModel(
                         "msg", this, null, new Object[] {t})));
