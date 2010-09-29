@@ -1,6 +1,7 @@
 package net.indyjug;
 
 import org.apache.wicket.markup.html.WebPage;
+import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.Model;
@@ -26,5 +27,7 @@ public class SimpleFormPage extends WebPage {
 
 		f.add(new TextField<String>("something", somethingModel));
 		add(f);
+
+		add(new Label("said", somethingModel));
     }
 }
