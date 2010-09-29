@@ -23,7 +23,8 @@ public class HomePage extends WebPage {
     public HomePage(final PageParameters parameters) {
 
         // Add the simplest type of label
-        add(new Label("message", Model.of("It's alive!")));
+        long t = System.currentTimeMillis();
+        add(new Label("message", Model.of("Milliseconds since the epoch: " + t)));
 
         // TODO Add your page's components here
     }
