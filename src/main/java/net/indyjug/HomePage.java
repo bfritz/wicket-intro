@@ -31,5 +31,7 @@ public class HomePage extends WebPage {
                         "msg", this, null, new Object[] {t})));
 
         add(new BookmarkablePageLink("linkHome", HomePage.class));
+
+        add(new BookmarkablePageLink("linkToForm", SimpleFormPage.class));
     }
 }
