@@ -3,6 +3,7 @@ package net.indyjug;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
+import org.apache.wicket.markup.html.link.BookmarkablePageLink;
 import org.apache.wicket.model.StringResourceModel;
 
 /**
@@ -29,6 +30,6 @@ public class HomePage extends WebPage {
                     new StringResourceModel(
                         "msg", this, null, new Object[] {t})));
 
-        // TODO Add your page's components here
+        add(new BookmarkablePageLink("linkHome", HomePage.class));
     }
 }
