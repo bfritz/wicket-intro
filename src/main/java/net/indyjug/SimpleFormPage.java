@@ -33,7 +33,9 @@ public class SimpleFormPage extends WebPage {
 		atf.add(new AjaxFormComponentUpdatingBehavior("onkeyup") {
 			@Override
 			protected void onUpdate(AjaxRequestTarget target) {
-				System.out.println("changed");
+				if (target != null) {
+					target.addComponent(get("said"));
+				}
 			}
 
 		});
@@ -41,6 +43,6 @@ public class SimpleFormPage extends WebPage {
 
 		add(f);
 
-		add(new Label("said", somethingModel));
+		add(new Label("said", somethingModel).setOutputMarkupId(true));
     }
 }
