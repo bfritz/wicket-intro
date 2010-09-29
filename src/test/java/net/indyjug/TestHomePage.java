@@ -11,6 +11,8 @@ import org.apache.wicket.util.tester.WicketTester;
  */
 public class TestHomePage extends TestCase
 {
+	private static final String NO_PARAMETERS = "";
+
 	private WicketTester tester;
 
 	@Override
@@ -35,5 +37,7 @@ public class TestHomePage extends TestCase
 
 		//assert rendered label component
 		tester.assertLabel("message", "1,000 milliseconds have elapsed since the unix epoch.");
+
+		tester.assertBookmarkablePageLink("linkHome", HomePage.class, NO_PARAMETERS);
 	}
 }
