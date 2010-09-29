@@ -3,7 +3,7 @@ package net.indyjug;
 import org.apache.wicket.PageParameters;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
-import org.apache.wicket.model.Model;
+import org.apache.wicket.model.StringResourceModel;
 
 /**
  * Homepage
@@ -24,7 +24,9 @@ public class HomePage extends WebPage {
 
         // Add the simplest type of label
         long t = System.currentTimeMillis();
-        add(new Label("message", Model.of("Milliseconds since the epoch: " + t)));
+        add(new Label("message",
+                    new StringResourceModel(
+                        "msg", this, null, new Object[] {t})));
 
         // TODO Add your page's components here
     }
