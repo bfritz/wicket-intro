@@ -1,6 +1,7 @@
 package net.indyjug;
 
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.request.target.coding.QueryStringUrlCodingStrategy;
 
 /**
  * Application object for your web application. If you want to run this application without deploying, run the Start class.
@@ -14,6 +15,11 @@ public class WicketApplication extends WebApplication
      */
 	public WicketApplication()
 	{
+	}
+
+	@Override
+	public void init() {
+		mount(new QueryStringUrlCodingStrategy("/form", SimpleFormPage.class));
 	}
 	
 	/**
