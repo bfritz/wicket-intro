@@ -23,7 +23,7 @@ public class HomePage extends WebPage {
     public HomePage(final PageParameters parameters) {
 
         // Add the simplest type of label
-        add(new Label("message", new Model<String>("It's alive!")));
+        add(new Label("message", Model.of("It's alive!")));
 
         // TODO Add your page's components here
     }
