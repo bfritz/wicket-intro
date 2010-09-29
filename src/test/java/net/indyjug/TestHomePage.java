@@ -25,6 +25,6 @@ public class TestHomePage extends TestCase
 		tester.assertRenderedPage(HomePage.class);
 
 		//assert rendered label component
-		tester.assertLabel("message", "If you see this message wicket is properly configured and running");
+		tester.assertLabel("message", "1,285,778,541,604 milliseconds have elapsed since the unix epoch.");
 	}
 }
